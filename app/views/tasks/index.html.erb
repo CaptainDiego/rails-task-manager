@@ -3,8 +3,10 @@
 <% @tasks.each do |task| %>
   <ul>
     <li>
-      <%= check_box_tag(task.title, value = task.completed, checked = task.completed) %>
+      <%= check_box_tag(task.title, value=task.completed, checked=task.completed) %>
       <%= link_to task.title, task_path(task) %>
     </li>
   </ul>
 <% end %>
+
+<i class="fas fa-plus-square icons"></i> <%= link_to "Create a new task" , new_path %>
