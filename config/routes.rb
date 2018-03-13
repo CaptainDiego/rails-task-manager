@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'tasks/:id/edit', to: 'tasks#edit', as: :edit
   patch 'task/:id', to: 'tasks#update'
   put 'task/:id', to: 'tasks#update'
-  delete 'task/:id', to: 'tasks#destroy'
+  delete 'task/:id', to: 'tasks#destroy', as: :delete
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
